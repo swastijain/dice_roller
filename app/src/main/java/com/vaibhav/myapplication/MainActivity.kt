@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var diceImage : ImageView
     private lateinit var numberDisplay : TextView
+    private lateinit var reset : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         diceImage = findViewById(R.id.dice_image)
         numberDisplay = findViewById(R.id.number_display)
+        reset = findViewById(R.id.reset)
 
         val rollButton : Button = findViewById(R.id.roll_button);
         rollButton.setOnClickListener {rollDice()}
+
+        reset.setOnClickListener { resetButton() }
     }
 
     private fun rollDice(){
@@ -40,4 +44,8 @@ class MainActivity : AppCompatActivity() {
         numberDisplay.text = "Number is: $number"
     }
 
+    private fun resetButton() {
+        diceImage.setImageResource(R.drawable.empty_dice)
+        numberDisplay.text = "Roll the Dice!"
+    }
 }

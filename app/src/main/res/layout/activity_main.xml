@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:text="Roll the Dice!"
         android:textSize="25sp"/>
 
 
@@ -30,5 +31,12 @@
         android:text="Roll"
         android:layout_gravity="center_horizontal"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Reset" />
 
 </LinearLayout>
